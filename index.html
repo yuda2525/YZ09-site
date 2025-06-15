@@ -396,3 +396,112 @@
         this.reset();
       });
     </script>
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(to right top, #121212, #1c1c1c);
+        color: #f4f4f4;
+        overflow-x: hidden;
+      }
+
+      header, footer {
+        background: rgba(30, 30, 30, 0.9);
+        backdrop-filter: blur(10px);
+        padding: 1.5rem;
+        text-align: center;
+        box-shadow: 0 0 20px rgba(0, 170, 255, 0.2);
+      }
+
+      header h1, footer .footer-logo {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #00ccff;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 1.8rem;
+        margin-top: 2.5rem;
+        color: #00ccff;
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+      }
+
+      .card, .accordion-item {
+        background: rgba(255,255,255,0.05);
+        border-radius: 1.5rem;
+        padding: 1.2rem;
+        margin: 1rem auto;
+        box-shadow: 0 0 15px rgba(0,255,255,0.08);
+        transition: transform 0.3s ease;
+        max-width: 90%;
+      }
+
+      .card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 0 30px rgba(0,255,255,0.15);
+      }
+
+      .form-section input, .form-section textarea {
+        width: 90%;
+        margin: 0.5rem auto;
+        display: block;
+        padding: 0.8rem;
+        border-radius: 0.8rem;
+        border: none;
+      }
+
+      .form-section button {
+        background: #00ccff;
+        color: #000;
+        border: none;
+        padding: 0.8rem 2rem;
+        border-radius: 1rem;
+        margin: 1rem auto;
+        display: block;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .floating-buttons {
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 999;
+      }
+
+      .floating-buttons img {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0,255,255,0.4);
+      }
+
+      .scroll-toggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 998;
+      }
+
+      .scroll-toggle button {
+        background: #00ccff;
+        color: #000;
+        padding: 0.6rem 1.2rem;
+        border: none;
+        border-radius: 1rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+
+      @media (max-width: 768px) {
+        .card, .form-section input, .form-section textarea {
+          max-width: 95%;
+        }
+      }
+    </style>
+  </body>
+</html>
