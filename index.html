@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Y&Z Studio - Solusi Digital Kreatif</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap">
+    <style>
+      :root {
+        --primary: #3ab7ff;
+        --accent: #00e0ff;
+        --background: #0f0f1a;
+        --body: #1a1a2e;
+        --header: rgba(255, 255, 255, 0.05);
+        --footer: rgba(255, 255, 255, 0.025);
+        --glass: rgba(255, 255, 255, 0.1);
+        --white: #ffffff;
+        --text: #e0e0e0;
+        --shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: var(--background);
+        color: var(--text);
+        overflow-x: hidden;
+      }
+
+      header {
+        backdrop-filter: blur(12px);
+        background: var(--header);
+        box-shadow: var(--shadow);
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+
+      header h1 {
+        font-size: 1.8rem;
+        color: var(--primary);
+      }
+
+      .cta {
+        background: linear-gradient(to right, var(--primary), var(--accent));
+        color: #fff;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        text-decoration: none;
+        font-weight: bold;
+        box-shadow: var(--shadow);
+      }
+
+      .hero {
+        padding: 4rem 2rem;
+        text-align: center;
+        background: var(--body);
+        box-shadow: inset 0 0 40px rgba(0, 255, 255, 0.05);
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: auto;
+        opacity: 0.9;
+      }
+
+      .section-title {
+        text-align: center;
+        margin: 3rem 0 1rem;
+        font-size: 1.8rem;
+        color: var(--accent);
+      }
+
+      .pricing {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        padding: 2rem;
+      }
+
+      .card {
+        background: var(--glass);
+        border-radius: 1.5rem;
+        padding: 2rem;
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(20px);
+        transition: 0.3s ease;
+      }
+
+      .card:hover {
+        transform: scale(1.02);
+        background: rgba(255, 255, 255, 0.12);
+      }
+
+      .card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: var(--primary);
+      }
+
+      .card p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+
+      .card .price {
+        font-size: 1.2rem;
+        color: var(--accent);
+        font-weight: bold;
+      }
+
+      .cta-section {
+        text-align: center;
+        padding: 3rem 1rem;
+        background: var(--body);
+      }
+
+      .cta-section a {
+        background: var(--accent);
+        padding: 1rem 2rem;
+        color: #fff;
+        border-radius: 1.5rem;
+        text-decoration: none;
+        font-weight: bold;
+        box-shadow: var(--shadow);
+      }
+
+      footer {
+        background: var(--footer);
+        padding: 2rem;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #aaa;
+        margin-top: 2rem;
+        backdrop-filter: blur(6px);
+      }
+
+      @media (max-width: 768px) {
+        .hero h2 {
+          font-size: 1.5rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+
+        .card {
+          padding: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Y&Z Studio</h1>
+      <a href="https://wa.me/6285720906090?text=Halo%20Y%26Z%20Studio%2C%20saya%20tertarik%20dengan%20jasa%20Anda." class="cta">Chat WhatsApp</a>
+    </header>
+
+    <section class="hero">
+      <h2>Solusi Digital Kreatif, Cepat & Terjangkau</h2>
+      <p>Kami hadir untuk membantu UMKM, mahasiswa, dan perusahaan membangun tampilan digital profesional dan menarik.</p>
+    </section>
+
+    <h2 class="section-title">Paket & Harga</h2>
+
+    <section class="pricing">
+      <div class="card">
+        <h3>Basic</h3>
+        <p>1 Halaman Landing Page Sederhana.<br>Revisi Maks 1x.<br>Waktu pengerjaan 2-3 hari.</p>
+        <div class="price">Rp350.000</div>
+      </div>
+      <div class="card">
+        <h3>Pro</h3>
+        <p>Landing Page Professional dengan Fitur Interaktif.<br>Revisi Maks 2x.<br>Waktu pengerjaan 3-5 hari.</p>
+        <div class="price">Rp600.000</div>
+      </div>
+      <div class="card">
+        <h3>Premium</h3>
+        <p>Landing Page Multi-Fitur + Admin Panel.<br>Revisi Maks 3x.<br>Pengerjaan 5-7 hari.</p>
+        <div class="price">Rp950.000</div>
+      </div>
+      <div class="card">
+        <h3>Custom</h3>
+        <p>Paket Fleksibel Sesuai Kebutuhan Anda.<br>Diskusi dan Estimasi Langsung.</p>
+        <div class="price">Mulai dari Rp1.000.000</div>
+      </div>
+    </section>
