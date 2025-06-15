@@ -308,3 +308,91 @@
         <p><a href="mailto:yudabastard84@gmail.com" style="color:var(--accent);font-weight:bold;">yudabastard84@gmail.com</a></p>
       </div>
     </section>
+    <h2 class="section-title">Portofolio Proyek</h2>
+    <section class="pricing" id="portfolio-slider">
+      <div class="card">
+        <h3>Landing Page Klinik Gigi</h3>
+        <p>Desain clean dengan fitur form konsultasi & animasi modern. Cocok untuk layanan kesehatan.</p>
+      </div>
+      <div class="card">
+        <h3>Landing Page UMKM Makanan</h3>
+        <p>Tampilan 3D, full responsive. Fokus pada visual produk, tombol CTA & kontak aktif.</p>
+      </div>
+      <div class="card">
+        <h3>Landing Page Sekolah Digital</h3>
+        <p>Integrasi form pendaftaran, info kelas, dan testimoni siswa. Satu halaman efisien.</p>
+      </div>
+      <div class="card">
+        <h3>Landing Page Fashion Brand</h3>
+        <p>Warna neon-glassy, efek slider & showcase produk. Memikat target anak muda.</p>
+      </div>
+      <div class="card">
+        <h3>Landing Page Freelance Personal</h3>
+        <p>Portofolio dinamis, form kontak, dan gaya personal branding yang kuat.</p>
+      </div>
+    </section>
+
+    <h2 class="section-title">Hubungi Kami</h2>
+    <form id="contact-form" class="form-section">
+      <input type="text" name="nama" placeholder="Nama Anda" required />
+      <input type="email" name="email" placeholder="Email Aktif" required />
+      <textarea name="pesan" placeholder="Pesan atau pertanyaan" required></textarea>
+      <button type="submit">Kirim Pesan</button>
+    </form>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">Y&Z Studio</div>
+        <p>Solusi Digital Kreatif. © 2025 All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <div class="floating-buttons">
+      <a href="https://wa.me/6285720906090?text=Halo%20Y%26Z%20Studio%2C%20saya%20tertarik%20buat%20landing%20page%20..." target="_blank" class="float-wa" title="Chat WhatsApp">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WA" />
+      </a>
+      <a href="mailto:yudabastard84@gmail.com" class="float-email" title="Kirim Email">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" />
+      </a>
+    </div>
+
+    <!-- Scroll Toggle -->
+    <div class="scroll-toggle">
+      <button onclick="scrollToTop()">↑</button>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+      // Slider Testimoni & Artikel
+      let currentIndex = 0;
+      const sliders = {
+        testimonial: document.querySelectorAll('#testimonial-slider .card'),
+        article: document.querySelectorAll('#article-slider .card'),
+        portfolio: document.querySelectorAll('#portfolio-slider .card')
+      };
+
+      function autoplaySlider(section, delay = 4000) {
+        const cards = sliders[section];
+        setInterval(() => {
+          cards.forEach((card, i) => {
+            card.style.display = i === currentIndex ? 'block' : 'none';
+          });
+          currentIndex = (currentIndex + 1) % cards.length;
+        }, delay);
+      }
+
+      ['testimonial', 'article', 'portfolio'].forEach(section => autoplaySlider(section));
+
+      // Scroll Top
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // Contact Form Handler (Optional)
+      document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Pesan Anda berhasil dikirim. Kami akan segera menghubungi Anda.');
+        this.reset();
+      });
+    </script>
