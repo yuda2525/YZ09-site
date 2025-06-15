@@ -505,3 +505,52 @@
     </style>
   </body>
 </html>
+<section id="admin-panel" class="min-h-screen px-4 py-16 bg-[#0f1320] text-white">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 border-b border-green-400 pb-2">Panel Admin (Sementara)</h2>
+    
+    <form id="adminForm" class="space-y-6">
+      <div>
+        <label class="block mb-1">Judul Halaman:</label>
+        <input type="text" id="pageTitle" class="w-full px-3 py-2 rounded bg-[#1a1f2e] text-white border border-gray-600" />
+      </div>
+
+      <div>
+        <label class="block mb-1">Deskripsi Utama:</label>
+        <textarea id="mainDesc" rows="4" class="w-full px-3 py-2 rounded bg-[#1a1f2e] text-white border border-gray-600"></textarea>
+      </div>
+
+      <div>
+        <label class="block mb-1">No. WhatsApp (CTA):</label>
+        <input type="text" id="waNumber" class="w-full px-3 py-2 rounded bg-[#1a1f2e] text-white border border-gray-600" />
+      </div>
+
+      <div>
+        <label class="block mb-1">Email Kontak:</label>
+        <input type="email" id="emailContact" class="w-full px-3 py-2 rounded bg-[#1a1f2e] text-white border border-gray-600" />
+      </div>
+
+      <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Simpan Perubahan
+      </button>
+    </form>
+
+    <p class="mt-6 text-sm text-gray-400">Login: gunakan password sementara <strong>admin123</strong></p>
+  </div>
+</section>
+
+<script>
+  document.getElementById('adminForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const title = document.getElementById('pageTitle').value;
+    const desc = document.getElementById('mainDesc').value;
+    const wa = document.getElementById('waNumber').value;
+    const email = document.getElementById('emailContact').value;
+
+    localStorage.setItem('pageTitle', title);
+    localStorage.setItem('mainDesc', desc);
+    localStorage.setItem('waNumber', wa);
+    localStorage.setItem('emailContact', email);
+    alert('Konten berhasil disimpan!');
+  });
+</script>
